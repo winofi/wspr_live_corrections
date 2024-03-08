@@ -25,3 +25,14 @@ Check files are named using a unique number and are executed in ascending order.
 | 10 | Validated against generic validation checks |
 | 20 | Corrected to be valid |
 | 30 | Manually validated by transmitting and receiving station |
+
+### Spot classification
+There might be a scheme to flag spots if they are known to be something "special" like balloon telemetry. Classes might contain:
+
+| Spot class ID | Desciption |
+|-----|-----|
+| 1 | Wspr spot |
+| 2 | Balloon telemetry |
+| 3 | Moving transmitter station |
+| 4 | Moving receiving station |
+| 5 | Long path |
