@@ -16,23 +16,24 @@ Check files are named using a unique number and are executed in ascending order.
 * If spots are known valid they might be marked as 30. 
 
 ### Validation State (column "validation_state" in rx table):
-| Validation State | Desciption |
-|-----|-----|
-| -20 | Known bad spot (this spot is known to be a bad decode) |
-| -10 | Generic validation failed (might still be a valid spot like balloon telemetry) |
-| -9 | corrected "non normal" wspr spot |
-| 0 | Not validated |
-| 10 | Validated against generic validation checks |
-| 20 | Corrected to be valid |
-| 30 | Manually validated by transmitting and receiving station |
+| Validation State | Description                                                                    |
+|------------------|--------------------------------------------------------------------------------|
+| -21              | Known duplicate                                                                |
+| -20              | Known bad spot (this spot is known to be a bad decode)                         |
+| -10              | Generic validation failed (might still be a valid spot like balloon telemetry) |
+| -9               | corrected "non normal" wspr spot                                               |
+| 0                | Not validated                                                                  |
+| 10               | Validated against generic validation checks                                    |
+| 20               | Corrected to be valid                                                          |
+| 30               | Manually validated by transmitting and receiving station                       |
 
 ### Spot classification
 There might be a scheme to flag spots if they are known to be something "special" like balloon telemetry. Classes might contain:
 
-| Spot class ID | Desciption |
-|-----|-----|
-| 1 | Wspr spot |
-| 2 | Balloon telemetry |
-| 3 | Moving transmitter station |
-| 4 | Moving receiving station |
-| 5 | Long path |
+| Spot class ID | Desciption                  |
+|-----|-----------------------------|
+| 1 | Wspr spot                   |
+| 2 | Balloon telemetry           |
+| 3 | Moving transmitter station  |
+| 4 | Moving receiving station    |
+| 5 | Long path                   |
