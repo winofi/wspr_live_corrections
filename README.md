@@ -13,6 +13,7 @@ Check files are named using a unique number and are executed in ascending order.
 * The correction file has to contain an explanation of what is wrong in the corresponding spots. If available the source of the knowledge must be specified. 
 * If there is a decoding or configuration error (for example the rx frequency is wrong) the corresponding fields get corrected and the spot validation_state is set to 20 (or -9 if they are a known telemetry coding scheme). 
 * If spots are known false decodes, they are marked as -20.
+* If spots are known valid they might be marked as 30. 
 
 ### Validation State (column "validation_state" in rx table):
 | Validation State | Desciption |
