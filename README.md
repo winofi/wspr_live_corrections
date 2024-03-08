@@ -1,6 +1,6 @@
 # DRAFT DOCUMENT NOT ACTUALLY IMPLEMENTED
 # Correcting wspr
-There are many known errors inside the Wspr (wsprnet.org) dataset. This reposity contains a collection of known issues which are applied to the wspr.live database. 
+There are many known errors inside the Wspr (wsprnet.org) dataset. This repository contains a collection of known issues which are applied to the wspr.live database. 
 
 ### Automated (fast) wspr.live spot validation process
 Incoming spots are validated against "fast" checks defined in folder live_checks. They are simple plausibility checks written in python not using any context but the actual spot. If any of this checks return a negative result the spot is marked as -10 in the validation_state column. If all validations are positive they get a validation score of 10. 
