@@ -3,10 +3,11 @@
 There are many known errors inside the Wspr (wsprnet.org) dataset. This reposity contains a collection of known issues which are applied to the wspr.live database. 
 
 ### Automated (fast) wspr.live spot validation process
-Incoming spots are validated against "fast" checks defined in folder live_checks. They are simple plausibility checks written in python not using any context but the actual spot. If any of this checks return a negative result the spot is marked as -10 in the validation_state column. If all validations are positive they get an validation score of 10. 
+Incoming spots are validated against "fast" checks defined in folder live_checks. They are simple plausibility checks written in python not using any context but the actual spot. If any of this checks return a negative result the spot is marked as -10 in the validation_state column. If all validations are positive they get a validation score of 10. 
 
 ### Asynchronous "slow" spot validation. 
 They are defined as SQL statements inside the manual_corrections folder and get directly applied against the dataset to correct errors or mark spots as bad if they are false decodes. 
+Check files are named using a unique number and are executed in ascending order. The number of the last check executed is stored inside the applied_checks table.  
 
 #### Correction rules
 * The correction file has to contain an explanation of what is wrong in the corresponding spots. If available the source of the knowledge must be specified. 
